@@ -39,7 +39,7 @@ const Home: NextPage = () => {
       try{
         await (window as any).ethereum.request({
           method: 'wallet_switchEthereumChain',
-          params: [{ chainId: '0x5' }],
+          params: [{ chainId: '0x1' }],
         });
         const provider = await new ethers.providers.Web3Provider((window as any).ethereum);
         await provider.send('eth_requestAccounts', []);
